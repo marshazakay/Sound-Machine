@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sound Machine</title>
+    <style>
+  body {
+    background-color: #333;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+  #sound-machine {
+    background-color: #222;
+    border: 10px solid #444;
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+  }
+  .sound-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #555;
+    border: 2px solid #888;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px;
+    color: #fff;
+    text-shadow: 1px 1px 1px ;
+  }
+</style>
+</head>
+<body>
+
+<div id="sound-machine">
+    <h1>Sound Machine</h1>
+    <div>
+        <button class="sound-button" onclick="playSound('sound1')">Sound 1</button>
+        <button class="sound-button" onclick="playSound('sound2')">Sound 2</button>
+        <button class="sound-button" onclick="playSound('sound3')">Sound 3</button>
+    </div>
+    <div>
+        <button class="sound-button" onclick="playSound('sound4')">Sound 4</button>
+        <button class="sound-button" onclick="playSound('sound5')">Sound 5</button>
+    </div>
+</div>
+
+<audio id="sound1" src="sound1.mp3"></audio>
+<audio id="sound2" src="sound2.mp3"></audio>
+<audio id="sound3" src="sound3.mp3"></audio>
+<audio id="sound4" src="sound4.mp3"></audio>
+<audio id="sound5" src="sound5.mp3"></audio>
+
+<script>
+  function playSound(soundID) {
+    var sound = document.getElementById(soundID);
+    sound.play();
+  }
+</script>
+
+</body>
+</html>
